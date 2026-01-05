@@ -1,4 +1,6 @@
 # ZJU LaTeX Resume Template
+[![Build Resume](https://github.com/hudou/zju-resume-template/actions/workflows/build.yml/badge.svg)](https://github.com/hudou/zju-resume-template/actions/workflows/build.yml)
+
 这是一个浙江大学 LaTeX 简历模板。
 
 ## 🥳 效果
