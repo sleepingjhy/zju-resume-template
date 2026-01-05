@@ -7,6 +7,43 @@
 ## 🥳 效果
 ![简历效果](CV.jpg)
 
+## ☁️ 在线自动构建 (GitHub Actions)
+
+本项目配置了 GitHub Actions 自动化构建流程。**您无需在本地安装庞大的 LaTeX 环境**，只需在 GitHub 上修改代码，即可自动生成 PDF 简历。
+
+### 使用步骤：
+
+1. **Fork 本项目**：点击右上角的 `Fork` 按钮，将项目复制到您的 GitHub 账号下。
+2. **修改代码**：在您的仓库中，直接编辑 `CV.tex` 文件（或上传您的修改）。
+3. **自动触发**：一旦您提交 (Commit) 并推送 (Push) 代码，GitHub Actions 会自动开始构建。
+4. **下载简历**：
+    *   点击仓库上方的 **Actions** 标签页。
+        
+        ![Step 1](ci_steps/1.png)
+    *   在左侧列表中点击 **Build Resume** 工作流。
+        
+        ![Step 2](ci_steps/2.png)
+    *   点击最新的那次运行记录（通常显示为绿色对勾 ✅）。
+        
+        ![Step 3](ci_steps/3.png)
+    *   在页面底部的 **Artifacts** 区域，点击 **CV-PDF** 即可下载生成的 PDF 文件。
+        
+        ![Step 4](ci_steps/4.png)
+
+## 💻 在线编辑与编译 (GitHub Codespaces)
+
+如果您希望拥有**完整的 VS Code 编辑体验**（语法高亮、文件管理），但又不想在本地安装几十 GB 的 LaTeX 环境，可以使用 GitHub Codespaces。
+
+### 使用步骤：
+
+1.  **启动环境**：点击页面顶部的 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/maksymilan/zju-resume-template) 徽章。
+2.  **等待初始化**：GitHub 会为您启动一个云端开发环境（首次启动会自动安装 LaTeX 依赖，可能需要 2-3 分钟，请耐心等待）。
+3.  **开始编辑**：环境启动后，您将看到一个浏览器版的 VS Code。
+4.  **编译预览**：
+    *   打开终端 (Terminal) -> 新建终端。
+    *   输入 `make` 命令即可编译。
+    *   在左侧文件列表中右键点击生成的 `CV.pdf`，选择 "Download" 下载到本地。
+
 ## 📝 环境与依赖 (Environment & Dependencies)
 
 ### 1. TeX 发行版 (Distribution)
@@ -80,29 +117,6 @@ make
 ```bash
 make clean
 ```
-
-## ☁️ 在线自动构建 (GitHub Actions)
-
-本项目配置了 GitHub Actions 自动化构建流程。**您无需在本地安装庞大的 LaTeX 环境**，只需在 GitHub 上修改代码，即可自动生成 PDF 简历。
-
-### 使用步骤：
-
-1. **Fork 本项目**：点击右上角的 `Fork` 按钮，将项目复制到您的 GitHub 账号下。
-2. **修改代码**：在您的仓库中，直接编辑 `CV.tex` 文件（或上传您的修改）。
-3. **自动触发**：一旦您提交 (Commit) 并推送 (Push) 代码，GitHub Actions 会自动开始构建。
-4. **下载简历**：
-    *   点击仓库上方的 **Actions** 标签页。
-        
-        ![Step 1](ci_steps/1.png)
-    *   在左侧列表中点击 **Build Resume** 工作流。
-        
-        ![Step 2](ci_steps/2.png)
-    *   点击最新的那次运行记录（通常显示为绿色对勾 ✅）。
-        
-        ![Step 3](ci_steps/3.png)
-    *   在页面底部的 **Artifacts** 区域，点击 **CV-PDF** 即可下载生成的 PDF 文件。
-        
-        ![Step 4](ci_steps/4.png)
 
 ## 参考与致谢 (Acknowledgements)
 
