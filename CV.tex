@@ -90,7 +90,7 @@
 
 %%%% 利用tikz来定位照片
 \begin{tikzpicture}[remember picture, overlay] 
-    \node[anchor = north east] at ($(current page.north east)+(-2cm,-1.2cm)$) {\includegraphics[height=3cm]{avatar.jpg}};
+    \node[anchor = north east] at ($(current page.north east)+(-2cm,-1.2cm)$) {\includegraphics[height=3cm]{photo.jpg}};
   \end{tikzpicture}%
   %%%% 利用tikz来定位学校Logo，这里只在第一页显示
   \begin{tikzpicture}[remember picture, overlay] 
@@ -100,7 +100,7 @@
 
 \centerline{\normalsize{\faPhone\ 188-0687-2026 \quad \faEnvelopeO\ \href{mailto:3240104011@zju.edu.cn}{3240104011@zju.edu.cn}}} 
 
-\centerline{\normalsize{\faGithubSquare\ \href{https://github.com/maksymilan}{https://github.com/sleepingjhy}}}
+\centerline{\normalsize{\faGithubSquare\ \href{https://github.com/sleepingjhy}{https://github.com/sleepingjhy}}}
     
 \section{\makebox[\widthof{\faGraduationCap}][c]{\color{CVBlue}\faGraduationCap}\ 教育背景}    
 \textbf{浙江大学} \hfill 2024.9 -- 至今\\[0.5em] % 标题和正文间加一点距离
@@ -113,12 +113,12 @@
 
 % --- 第一个项目 ---
 % 将标题行末尾的 \\ 替换为 \titlebreak 命令
-\textbf{由 Deepseek API 驱动的二次元游戏人物桌宠 Agent} \hfill 2026.01 -- 至今 \titlebreak
+\item \textbf{由 Deepseek API 驱动的二次元游戏人物桌宠 Agent} \hfill 2026.01 -- 至今 \titlebreak
 项目描述：为满足相关调研中同学日益增长的情感需求，我基于 \textbf{PySide6} 独立开发了一个 Windows 桌宠应用，支持\textbf{多实例桌宠、拖拽与状态动画、系统托盘、右键菜单、设置持久化、内置音乐播放器与模拟手机聊天界面}，具备 EXE 打包分发能力以满足普通同学的快速上手使用。
 % 在 itemize 的选项中，使用 topsep=\intraProjectListTopSep 来控制上边距
 
 \begin{itemize}[nosep, topsep=\intraProjectListTopSep]
-    \item \textbf{多实例并发管理与同步}：后端采用 \textbf{Python} 语言，利用 \textbf{QMediaPlayer/QAudioOutput} 和 \textbf{QFileSystemWatcher} 实现\textbf{音乐播放引擎}，执行多实例管理与全局同步（批量增减实例、策略联动），运用 \textbf{JSON 持久化}实现透明度、图标显示优先级、多开数量、关闭策略等配置的持久化，确保应用长期驻留稳定，配置重启可恢复，用户操作链路完整。
+    \item \textbf{多实例并发管理与同步}：后端采用 \textbf{Python} 语言，利用 \textbf{QMediaPlayer/QAudioOutput} 和 \textbf{QFileSystemWatcher} 实现\textbf{音乐播放引擎}，执行多实例管理与全局同步，运用 \textbf{JSON 持久化}实现透明度、图标显示优先级、多开数量、关闭策略等配置的持久化，确保应用长期驻留稳定，配置重启可恢复，用户操作链路完整。
     \item \textbf{调用 API 与语音模型实现有声对话}：运用\textbf{网页搜索 skill} 让大模型了解角色设定，运用 \textbf{ASR} 与 \textbf{TTS} 技术实现了 Agent 与用户的\textbf{实时语音对话}。提高了用户的陪伴感和满足感。
     \item \textbf{可视化 GUI}：前端使用 \textbf{PySide6(QtWidgets/QtGui/QtCore)、QSS、Qt 资源系统(qrc)} 框架构建了\textbf{设置页 + 音乐页 + 关于页 + 聊天页的多页面 UI}。实现右键实例弹出菜单与主界面双向实时同步，实现动画渲染与镜像移动。
 \end{itemize}
@@ -126,8 +126,8 @@
 % 使用 \projectsep 命令来分隔两个项目
 \projectsep
 
-\textbf{中国知网大规模文献爬虫} \hfill 2025.09 -- 2026.02 \titlebreak
-项目描述：为辅助导师和学长有关中文文献AI率检测科研项目的数据集构建，本项目旨在高效爬取知网上指定期刊的中文文献，我运用 Codex 模型负责构建了 \textbf{IP 访问限制恢复机制}和修复了若干bug。
+\item \textbf{中国知网大规模文献爬虫} \hfill 2025.09 -- 2026.02 \titlebreak
+项目描述：为辅助导师和学长有关中文文献AI率检测科研项目的\textbf{数据集构建}，本项目旨在高效爬取知网上指定期刊的中文文献，我运用 Codex 模型负责构建了 \textbf{IP 访问限制恢复机制}和修复了若干bug。
 
 \begin{itemize}[nosep, topsep=\intraProjectListTopSep]
     \item \textbf{构建 IP 访问限制恢复机制}：设计并实现爬虫的访问限制自动恢复链路：检测到 IP/会话受限后，触发重登录流程，使得爬虫任务的人工校验次数从每15篇一次下降至0。
@@ -138,15 +138,15 @@
 \projectsep
 
 % --- 第三个项目 ---
-\textbf{基于 SQL Server 的餐厅订单管理系统} \hfill 2025.09 -- 2025.11 \titlebreak
-项目描述：为辅助餐厅管理者管理订单，本项目设计了一个基于 SQL Server 的餐厅订单管理系统，实现了订单数据的自动化更新、管理。
+\item \textbf{基于 SQL Server 的餐厅订单管理系统} \hfill 2025.09 -- 2025.11 \titlebreak
+项目描述：为辅助餐厅管理者管理订单，本项目设计了一个基于 SQL Server 的餐厅订单管理系统，实现了订单数据的自动化更新管理。
 \begin{itemize}[nosep, topsep=\intraProjectListTopSep]
     \item \textbf{数据库系统设计与建模}：我完成了餐厅订单管理系统的全流程数据库设计，包括\textbf{需求分析、概念结构设计（ER 图）、逻辑结构设计}。设计并实现了\textbf{11张核心业务表}（如订单、菜品、食材、员工、分店等），并\textbf{建立主外键关系}和\textbf{索引优化}高频查询。
     \item \textbf{订单计数}：我编写了多个复杂\textbf{存储过程}，如\textbf{订单创建、订单支付、采购收货、生成销售日报、会员等级自动升级}等。使用\textbf{事务回滚}保障数据一致性，结合视图简化查询逻辑。
     \item \textbf{权限控制与安全性}：我设计了五类\textbf{数据库角色}，并通过\textbf{角色授权}、DENY/REVOKE 控制表级与列级权限。为顾客\textbf{创建个性化视图}，使用 \textbf{SESSION\_CONTEXT} 实现行级数据隔离，保障薪资、成本等敏感数据安全，满足实际餐饮系统的合规性与职责分离需求。
 \end{itemize}
 
-\section{\makebox[\widthof{\faCogs}][c]{\color{CVBlue}\faCogs}\ 技术栈}
+\section{\makebox[\widthof{\faCogs}][c]{\color{CVBlue}\faCogs}\ 掌握的技术栈}
 \begin{itemize}[nosep]
     \item \textbf{编程语言：} \textbf{Python}, SQL, C
     \item \textbf{AI 开发工具：} \textbf{VSCode、Claude Sonnet 4.5、GPT-5.3-Codex}
@@ -157,7 +157,6 @@
     \item 浙江大学2024-2025学年国家励志奖学金 \hfill 2025.10
     \item 浙江大学2024-2025学年三等奖学金 \hfill 2025.10
     \item 浙江大学2024-2025学年学业优秀标兵 \hfill 2025.10
-    
 \end{itemize}
     
 \section{\makebox[\widthof{\faInfo}][c]{\color{CVBlue}\faInfo}\ 其他}
