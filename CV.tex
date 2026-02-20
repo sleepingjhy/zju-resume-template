@@ -118,9 +118,9 @@
 % 在 itemize 的选项中，使用 topsep=\intraProjectListTopSep 来控制上边距
 
 \begin{itemize}[nosep, topsep=\intraProjectListTopSep]
-    \item \textbf{多实例并发管理与同步}：后端采用 \textbf{Python} 语言，利用 \textbf{QMediaPlayer/QAudioOutput} 和 \textbf{QFileSystemWatcher} 实现\textbf{音乐播放引擎（列表循环/单曲循环/随机、进度与音量控制、文件监听自动同步）}，执行多实例管理与全局同步（批量增减实例、策略联动），运用 \textbf{JSON 持久化}实现透明度、图标显示优先级、多开数量、关闭策略等配置的持久化，确保应用长期驻留稳定，配置重启可恢复，用户操作链路完整。
+    \item \textbf{多实例并发管理与同步}：后端采用 \textbf{Python} 语言，利用 \textbf{QMediaPlayer/QAudioOutput} 和 \textbf{QFileSystemWatcher} 实现\textbf{音乐播放引擎}，执行多实例管理与全局同步（批量增减实例、策略联动），运用 \textbf{JSON 持久化}实现透明度、图标显示优先级、多开数量、关闭策略等配置的持久化，确保应用长期驻留稳定，配置重启可恢复，用户操作链路完整。
     \item \textbf{调用 API 与语音模型实现有声对话}：运用\textbf{网页搜索 skill} 让大模型了解角色设定，运用 \textbf{ASR} 与 \textbf{TTS} 技术实现了 Agent 与用户的\textbf{实时语音对话}。提高了用户的陪伴感和满足感。
-    \item \textbf{可视化 GUI}：前端使用 \textbf{PySide6(QtWidgets/QtGui/QtCore)、QSS、Qt 资源系统(qrc)} 框架构建了\textbf{设置页 + 音乐页 + 关于页 + 聊天页的多页面 UI}。实现右键实例弹出菜单与主界面双向实时同步（音量/播放模式/实例设置），实现动画渲染与镜像移动（GIF 状态机：移动/拖拽/休息）。
+    \item \textbf{可视化 GUI}：前端使用 \textbf{PySide6(QtWidgets/QtGui/QtCore)、QSS、Qt 资源系统(qrc)} 框架构建了\textbf{设置页 + 音乐页 + 关于页 + 聊天页的多页面 UI}。实现右键实例弹出菜单与主界面双向实时同步，实现动画渲染与镜像移动。
 \end{itemize}
 
 % 使用 \projectsep 命令来分隔两个项目
@@ -130,7 +130,7 @@
 项目描述：为辅助导师和学长有关中文文献AI率检测科研项目的数据集构建，本项目旨在高效爬取知网上指定期刊的中文文献，我运用 Codex 模型负责构建了 \textbf{IP 访问限制恢复机制}和修复了若干bug。
 
 \begin{itemize}[nosep, topsep=\intraProjectListTopSep]
-    \item \textbf{构建 IP 访问限制恢复机制}：设计并实现爬虫的访问限制自动恢复链路：检测到 IP/会话受限后，触发重登录流程（关闭旧会话→重新初始化浏览器→IP 自动登录→Cookie 更新→任务续跑），使得爬虫任务的人工校验次数从每15篇一次下降至0。
+    \item \textbf{构建 IP 访问限制恢复机制}：设计并实现爬虫的访问限制自动恢复链路：检测到 IP/会话受限后，触发重登录流程，使得爬虫任务的人工校验次数从每15篇一次下降至0。
     \item \textbf{精确检索中文期刊}：采用知网 \textbf{HTML} 网页代码中期刊名所在位置的具体标签进行二次检索，防止默认检索中出现同名英文期刊导致中文数据集受污染，检索准确率上升至 \textbf{100\%} 。
     \item \textbf{修复遗漏爬取进度bug}：将爬取状态为 partial 的期刊也在初始加载时纳入爬取名单，防止不同年份的数据集规模出现断层。
 \end{itemize}
@@ -141,8 +141,8 @@
 \textbf{基于 SQL Server 的餐厅订单管理系统} \hfill 2025.09 -- 2025.11 \titlebreak
 项目描述：为辅助餐厅管理者管理订单，本项目设计了一个基于 SQL Server 的餐厅订单管理系统，实现了订单数据的自动化更新、管理。
 \begin{itemize}[nosep, topsep=\intraProjectListTopSep]
-    \item \textbf{数据库系统设计与建模}：我完成了餐厅订单管理系统的全流程数据库设计，包括\textbf{需求分析、概念结构设计（ER 图）、逻辑结构设计（第三范式）}。设计并实现了\textbf{11张核心业务表}（如订单、菜品、食材、员工、分店等），并\textbf{建立主外键关系}和\textbf{索引优化}高频查询。
-    \item \textbf{订单计数}：我编写了多个复杂\textbf{存储过程}，如\textbf{订单创建、订单支付、采购收货、销售日报生成、会员等级自动升级}等。使用\textbf{事务回滚}保障数据一致性，结合视图简化查询逻辑。
+    \item \textbf{数据库系统设计与建模}：我完成了餐厅订单管理系统的全流程数据库设计，包括\textbf{需求分析、概念结构设计（ER 图）、逻辑结构设计}。设计并实现了\textbf{11张核心业务表}（如订单、菜品、食材、员工、分店等），并\textbf{建立主外键关系}和\textbf{索引优化}高频查询。
+    \item \textbf{订单计数}：我编写了多个复杂\textbf{存储过程}，如\textbf{订单创建、订单支付、采购收货、生成销售日报、会员等级自动升级}等。使用\textbf{事务回滚}保障数据一致性，结合视图简化查询逻辑。
     \item \textbf{权限控制与安全性}：我设计了五类\textbf{数据库角色}，并通过\textbf{角色授权}、DENY/REVOKE 控制表级与列级权限。为顾客\textbf{创建个性化视图}，使用 \textbf{SESSION\_CONTEXT} 实现行级数据隔离，保障薪资、成本等敏感数据安全，满足实际餐饮系统的合规性与职责分离需求。
 \end{itemize}
 
